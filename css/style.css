@@ -2788,6 +2788,43 @@ footer .view-info:hover {
     width: 100px;
   }
 }
+@media only screen and (max-width: 575px) {
+  .content .nav {
+    min-height: 40px;
+  }
+  header .title {
+    margin: 45px auto 0;
+  }
+  #menu-mobile .menu {
+    padding: 0 0 10px;
+  }
+  #menu-mobile .menu li {
+    padding: 0 0 5px;
+  }
+  #menu-mobile .menu li a {
+    font-size: 14px;
+  }
+  #menu-mobile .logo {
+    padding: 10px 0 20px;
+  }
+  #menu-mobile .logo img {
+    max-width: 120px;
+  }
+  #menu-mobile .change-lang-container {
+    padding: 5px 0;
+    margin-bottom: 10px;
+  }
+  #menu-mobile .change-lang-container .lang {
+    padding: 4px;
+    font-size: 12px;
+  }
+  #menu-mobile .social {
+    padding-bottom: 0;
+  }
+  #menu-mobile .copyright {
+    line-height: 33px;
+  }
+}
 @media only screen and (max-width: 480px) {
   header {
     max-height: 300px;
@@ -2816,6 +2853,26 @@ footer .view-info:hover {
     width: 10px;
     height: 10px;
     bottom: 25px;
+  }
+  @keyframes go-top-bottom {
+    from {
+      -webkit-transform: translateY(2px);
+              transform: translateY(2px);
+    }
+    to {
+      -webkit-transform: translateY(15px);
+              transform: translateY(15px);
+    }
+  }
+  @-webkit-keyframes go-top-bottom {
+    from {
+      -webkit-transform: translateY(2px);
+              transform: translateY(2px);
+    }
+    to {
+      -webkit-transform: translateY(15px);
+              transform: translateY(15px);
+    }
   }
   .wrapper .content #settings-log-out {
     top: 40px;
@@ -3091,5 +3148,53 @@ footer .view-info:hover {
   }
   .coffee-page .result-item {
     max-width: 47%;
+  }
+}
+@media only screen and (max-height: 414px) {
+  .wrapper .content #menu-mobile .logo {
+    padding: 10px 0 15px;
+  }
+  .wrapper .content #menu-mobile .menu {
+    padding: 0 0 5px;
+  }
+  .wrapper .content #menu-mobile .menu li {
+    padding: 0 0 5px;
+  }
+  .wrapper .content #menu-mobile .copyright {
+    line-height: 30px;
+  }
+  .wrapper .content #menu-mobile .change-lang-container {
+    margin-bottom: 20px;
+  }
+  @keyframes go-top-bottom {
+    from {
+      -webkit-transform: translateY(2px);
+              transform: translateY(2px);
+    }
+    to {
+      -webkit-transform: translateY(20px);
+              transform: translateY(20px);
+    }
+  }
+  @-webkit-keyframes go-top-bottom {
+    from {
+      -webkit-transform: translateY(2px);
+              transform: translateY(2px);
+    }
+    to {
+      -webkit-transform: translateY(20px);
+              transform: translateY(20px);
+    }
+  }
+}
+@media only screen and (max-height: 375px) {
+  .wrapper .content #menu-mobile .social {
+    padding-bottom: 0;
+  }
+  .wrapper .content #menu-mobile .menu {
+    padding: 0 0 5px;
+  }
+  .wrapper .content #menu-mobile .menu li {
+    padding: 0 0 5px;
   }
 }
