@@ -396,10 +396,11 @@ header {
   background: url("../img/home/header-bg.jpg") no-repeat 50% fixed;
   background-size: cover;
   height: 100vh;
+  min-height: 360px;
 }
 header .title {
   color: #fff;
-  max-width: 585px;
+  max-width: 95%;
   margin: 140px auto 0;
 }
 header .title h1 {
@@ -2620,11 +2621,10 @@ footer .view-info:hover {
 }
 @media only screen and (max-width: 675px) {
   header {
-    max-height: 300px;
+    max-height: 400px;
   }
   header .title {
     margin: 110px auto 0;
-    max-width: 325px;
   }
   header .title h1 {
     font-size: 58px;
