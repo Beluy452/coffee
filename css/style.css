@@ -2620,9 +2620,6 @@ footer .view-info:hover {
   }
 }
 @media only screen and (max-width: 675px) {
-  header {
-    max-height: 400px;
-  }
   header .title {
     margin: 110px auto 0;
   }
