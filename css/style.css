@@ -2623,13 +2623,14 @@ footer .view-info:hover {
 }
 @media only screen and (max-width: 675px) {
   header .title {
-    margin: 110px auto 0;
+    margin: 85px auto 0;
   }
   header .title h1 {
     font-size: 58px;
   }
   header .title h1 span img {
     max-width: 43px;
+    padding-top: 10px;
   }
   header .title h2 {
     font-size: 14px;
