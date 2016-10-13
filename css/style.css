@@ -354,23 +354,29 @@ input::-webkit-inner-spin-button {
   transition: .3s;
 }
 @keyframes go-top-bottom {
-  /* назовём анимацию: "go-left-right" */
+  /* назовём анимацию: "go-top-bottom" */
   from {
-    bottom: 20px;
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
     /* от: left: 0px */
   }
   to {
-    bottom: 7%;
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
     /* до: left: 100%-50px */
   }
 }
 /* Префикс для Chrome, Opera, Safari */
 @-webkit-keyframes go-top-bottom {
   from {
-    top: 0;
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+    /* от: left: 0px */
   }
   to {
-    bottom: 10%;
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+    /* до: left: 100%-50px */
   }
 }
 /*animation css*/
@@ -444,8 +450,8 @@ header .mouse-block span {
   position: absolute;
   left: 0;
   right: 0;
-  animation: go-top-bottom 1s infinite alternate;
-  -webkit-animation: go-top-bottom 1s infinite alternate;
+  animation: go-top-bottom 1s ease-out infinite alternate;
+  -webkit-animation: go-top-bottom 1s ease-out infinite alternate;
 }
 .content nav {
   position: relative;
