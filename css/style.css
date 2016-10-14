@@ -565,9 +565,9 @@ header .mouse-block span {
   right: 0;
   top: 60px;
   z-index: 9999;
-  max-height: 540px;
   height: 100vh;
   overflow-y: auto;
+  padding-bottom: 60px;
 }
 .content .registration .title-register {
   text-align: center;
@@ -1625,6 +1625,8 @@ footer .view-info:hover {
 .news-page .item .item-title {
   font-size: 20px;
   color: #373737;
+  padding-top: 10px;
+  margin-top: 0;
 }
 .news-page .social-container {
   border-top: 1px solid #c4c4c4;
