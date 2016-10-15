@@ -14,8 +14,8 @@ body.active {
   position: fixed;
   left: 0;
   right: 0;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   background: rgba(93, 92, 92, 0.49);
 }
 a:hover,
@@ -96,8 +96,8 @@ img {
 }
 .account-block .log-in,
 .account-block .lang {
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   border: 1px solid #e0e0e0;
 }
 .account-block .log-in:hover,
@@ -113,8 +113,8 @@ img {
   right: -100px;
   margin: auto;
   top: 5px;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .account-block .log-in:hover span {
   font-size: 0;
@@ -144,8 +144,8 @@ img {
   background: rgba(255, 255, 255, 0.8);
   line-height: 25px;
   color: #000;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .social a:hover {
   background: #ffffff;
@@ -193,12 +193,39 @@ a:focus {
   -webkit-transform: translateX(-100%);
       -ms-transform: translateX(-100%);
           transform: translateX(-100%);
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 #menu-mobile .logo {
   max-width: 100%;
   padding: 40px 0 60px;
+}
+#menu-mobile .title-mobile-menu {
+  max-width: 130px;
+  margin: auto;
+}
+#menu-mobile .title-mobile-menu h2 {
+  font-family: "Bench", sans-serif;
+  color: #cacaca;
+  margin: 0;
+  font-size: 40px;
+  line-height: 1;
+}
+#menu-mobile .title-mobile-menu h2 img {
+  vertical-align: top;
+  padding-top: 6px;
+}
+#menu-mobile .title-mobile-menu .border {
+  height: 1px;
+  background: #ddd;
+  margin-top: -4px;
+  margin-bottom: 2px;
+}
+#menu-mobile .title-mobile-menu h3 {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #cacaca;
 }
 #menu-mobile .menu {
   display: block;
@@ -213,8 +240,8 @@ a:focus {
   font-weight: bold;
   font-size: 16px;
   color: #828181;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 #menu-mobile .menu li a:hover {
   color: #ecebec;
@@ -262,9 +289,9 @@ a:focus {
 }
 .toggle-menu.active {
   left: 245px;
-  top: -9px;
-  -webkit-transition: .3s;
-  transition: .3s;
+  top: -5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   background: #2c2c2c;
   padding-left: 14px;
 }
@@ -279,8 +306,8 @@ a:focus {
   display: block;
   content: '';
   top: 25px;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .toggle-menu span:before {
   cursor: pointer;
@@ -293,8 +320,8 @@ a:focus {
   display: block;
   content: '';
   top: -9px;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .toggle-menu span:after {
   cursor: pointer;
@@ -307,8 +334,8 @@ a:focus {
   display: block;
   content: '';
   top: 9px;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .toggle-menu span.active {
   background: transparent;
@@ -355,8 +382,8 @@ input::-webkit-inner-spin-button {
 }
 /*animation css*/
 .animate {
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 @keyframes go-top-bottom {
   /* назовём анимацию: "go-top-bottom" */
@@ -460,19 +487,24 @@ header .mouse-block span {
   -webkit-animation: go-top-bottom 1s ease-out infinite alternate;
 }
 .content nav {
-  position: relative;
-  min-height: 60px;
-  background: #2c2c2c;
-  -webkit-box-shadow: 0 0 1px 1px #000;
-          box-shadow: 0 0 1px 1px #000;
-}
-.content .fixed {
   position: fixed;
   left: 0;
   right: 0;
   top: 0;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  background: #2c2c2c;
+  -webkit-box-shadow: 0 0 1px 1px #000;
+          box-shadow: 0 0 1px 1px #000;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.content .fixed {
+  min-height: 60px;
   z-index: 9999;
-  min-height: 59px;
+  opacity: 1;
+  visibility: visible;
 }
 .content .modal-style {
   position: absolute;
@@ -662,8 +694,8 @@ header .mouse-block span {
   float: right;
   width: 100%;
   line-height: 25px;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .content .registration .add-phone:hover {
   color: #000;
@@ -682,8 +714,8 @@ header .mouse-block span {
   text-transform: uppercase;
   border-color: transparent;
   margin: 15px 0;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .content .registration .register-button:hover {
   background: #000;
@@ -769,8 +801,8 @@ header .mouse-block span {
   line-height: 30px;
   display: inline-block;
   margin: 0 10px;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .content #settings-log-out a:hover {
   color: #fff;
@@ -809,8 +841,8 @@ header .mouse-block span {
   height: 30px;
   line-height: 30px;
   border: 1px solid transparent;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .content #log-out a:hover {
   border-color: #c4c4c4;
@@ -852,8 +884,8 @@ header .mouse-block span {
 }
 .content .ground-coffee .shadow-block,
 .content .coffee-beans .shadow-block {
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .content .ground-coffee:hover .shadow-block,
 .content .coffee-beans:hover .shadow-block {
@@ -916,8 +948,8 @@ header .mouse-block span {
   text-align: center;
   color: #fff;
   text-transform: uppercase;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .content .brand .view-all-coffee:hover {
   background: #000;
@@ -1013,8 +1045,8 @@ header .mouse-block span {
   -webkit-transform: translateX(0);
       -ms-transform: translateX(0);
           transform: translateX(0);
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .icon-account {
   display: none;
@@ -1085,8 +1117,8 @@ footer .view-info {
   text-transform: uppercase;
   font-weight: 500;
   letter-spacing: 1px;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 footer .view-info:hover {
   background: #2c2c2c;
@@ -1102,6 +1134,8 @@ footer .view-info:hover {
 .copyright img {
   margin: 0 5px;
 }
+/*home-page-end*/
+/*about-page-begin*/
 .about-page {
   color: #646464;
 }
@@ -1110,6 +1144,9 @@ footer .view-info:hover {
   left: 0;
   right: 0;
   z-index: 1051;
+  opacity: 1;
+  visibility: visible;
+  min-height: 60px;
 }
 .about-page .menu-about {
   height: 60px;
@@ -1227,8 +1264,8 @@ footer .view-info:hover {
   -webkit-box-shadow: 0 1px 2px 2px #ddd;
           box-shadow: 0 1px 2px 2px #ddd;
   position: relative;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .about-page .submit-container button:hover img {
   opacity: 1;
@@ -1489,8 +1526,8 @@ footer .view-info:hover {
 .news-page .items .description-block .like-and-repost a {
   color: #757575;
   margin-left: 7px;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .news-page .items .description-block .like-and-repost a:hover {
   color: #ef524b;
@@ -1507,8 +1544,8 @@ footer .view-info:hover {
   color: #7c7c7c;
   font-style: italic;
   margin: 0 1px;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .news-page .items .description-block .tags-container a:hover {
   color: #ef524b;
@@ -1625,8 +1662,8 @@ footer .view-info:hover {
   -webkit-transform: scale(0.9);
   -ms-transform: scale(0.9);
   transform: scale(0.9);
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .news-page .item .from-coffee .img-container:hover .magnifier-img {
   opacity: 1;
@@ -1646,8 +1683,8 @@ footer .view-info:hover {
   bottom: 50px;
   right: 55px;
   opacity: 0;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .news-page .item .item-title {
   font-size: 20px;
@@ -1667,8 +1704,8 @@ footer .view-info:hover {
 }
 .news-page .social a {
   color: #959595;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .news-page .social a:hover {
   color: #ef524b;
@@ -1685,8 +1722,8 @@ footer .view-info:hover {
   display: inline-block;
   cursor: pointer;
   position: relative;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .news-page .sharing:hover .hidden-social {
   display: block;
@@ -1901,8 +1938,8 @@ footer .view-info:hover {
   height: 30px;
   line-height: 30px;
   font-size: 12px;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .coffee-page .you-mast-log-in a:hover {
   background: #2c2c2c;
@@ -1989,6 +2026,9 @@ footer .view-info:hover {
       -ms-transform: rotate(-90deg);
           transform: rotate(-90deg);
 }
+.coffee-page .filter-mobile .modal-info {
+  margin-top: 115px;
+}
 .coffee-page .pagination {
   margin: 0 0 20px;
 }
@@ -2020,8 +2060,8 @@ footer .view-info:hover {
   -webkit-border-radius: 0;
           border-radius: 0;
   color: #d1d1d1;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .content-settings-account .account-settings ul li a:hover {
   background: transparent;
@@ -2162,8 +2202,8 @@ footer .view-info:hover {
   -webkit-border-radius: 0;
           border-radius: 0;
   color: #d1d1d1;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   margin: 0;
 }
 .content-settings-account .wishlist ul li a:hover {
@@ -2197,8 +2237,8 @@ footer .view-info:hover {
   margin-left: 10px;
   font-size: 10px;
   text-transform: uppercase;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .content-settings-account .mailling-offers .clear-all:hover {
   color: #2c2c2c;
@@ -2308,6 +2348,8 @@ footer .view-info:hover {
     text-align: center;
     -webkit-box-shadow: none;
             box-shadow: none;
+    opacity: 1;
+    visibility: visible;
   }
   #nav {
     position: fixed;
@@ -2315,6 +2357,9 @@ footer .view-info:hover {
     left: 0;
     right: 0;
     z-index: 1051;
+    min-height: 59px;
+    opacity: 1;
+    visibility: visible;
   }
   #nav .container {
     max-width: 100%;
@@ -2374,7 +2419,7 @@ footer .view-info:hover {
   .content .account-advantages {
     background: url(../img/coffe-bg-repit.png) no-repeat -355px 285px;
   }
-  .content nav {
+  .content #nav {
     min-height: 50px;
   }
   .content .logo {
@@ -2942,7 +2987,7 @@ footer .view-info:hover {
   .wrapper .content .registration {
     top: 40px;
   }
-  .wrapper .content nav {
+  .wrapper .content #nav {
     min-height: 40px;
   }
   .wrapper .content .logo img {
@@ -2996,6 +3041,9 @@ footer .view-info:hover {
     height: 3px;
     width: 25px;
     top: 8px;
+  }
+  .toggle-menu.active {
+    top: -10px;
   }
   .contact-page header {
     display: none;
@@ -3234,6 +3282,20 @@ footer .view-info:hover {
 @media only screen and (max-height: 414px) {
   .wrapper .content #menu-mobile .logo {
     padding: 10px 0 15px;
+  }
+  .wrapper .content #menu-mobile .title-mobile-menu {
+    max-width: 100px;
+  }
+  .wrapper .content #menu-mobile .title-mobile-menu h2 {
+    font-size: 30px;
+  }
+  .wrapper .content #menu-mobile .title-mobile-menu h2 img {
+    vertical-align: top;
+    padding-top: 4px;
+    max-width: 22px;
+  }
+  .wrapper .content #menu-mobile .title-mobile-menu h3 {
+    font-size: 10px;
   }
   .wrapper .content #menu-mobile .menu {
     padding: 0 0 5px;
