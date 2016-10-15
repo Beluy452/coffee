@@ -2997,6 +2997,9 @@ footer .view-info:hover {
     width: 25px;
     top: 8px;
   }
+  .contact-page header {
+    display: none;
+  }
   .contact-page .title-contact-form,
   .contact-page .got-answers {
     display: none;
@@ -3065,9 +3068,6 @@ footer .view-info:hover {
   }
   .contact-page .have-question {
     display: block;
-  }
-  .about-page header {
-    display: none;
   }
   .about-page .menu-about {
     height: 40px;
