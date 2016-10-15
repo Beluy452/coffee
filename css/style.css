@@ -739,6 +739,9 @@ header .mouse-block span {
 .content .registration .hidden-website {
   display: none;
 }
+.content .registration .close {
+  margin-top: 30px;
+}
 .content #settings-log-out {
   padding: 15px 0;
   text-align: center;
@@ -2528,12 +2531,6 @@ footer .view-info:hover {
   .wrapper .content #registration .to-get-email-container {
     text-align: center;
   }
-  .wrapper .content #registration .close {
-    position: absolute;
-    right: 25px;
-    top: -100px;
-    margin: 0;
-  }
   .wrapper .content #settings-log-out {
     max-height: inherit;
   }
@@ -2910,7 +2907,7 @@ footer .view-info:hover {
     margin: 75px 0 35px;
   }
   .wrapper .content #registration .close {
-    top: -95px;
+    margin-top: 12px;
   }
   .wrapper .content #login .forgot-pass {
     max-width: 110px;
@@ -2938,9 +2935,6 @@ footer .view-info:hover {
     top: 40px;
     max-height: 200px;
     padding: 1px 0;
-  }
-  .wrapper .content #registration .close {
-    top: -120px;
   }
   .wrapper .content .modal-style,
   .wrapper .content .registration {
@@ -3284,8 +3278,5 @@ footer .view-info:hover {
   }
   .wrapper .content #menu-mobile .menu li {
     padding: 0 0 5px;
-  }
-  .wrapper .content #registration .close {
-    top: -90px;
   }
 }
