@@ -2659,6 +2659,9 @@ footer .view-info:hover {
   .coffee-page .container-coffee .last-news-container .item-default:nth-child(2) {
     margin: 10px 0;
   }
+  .coffee-page .container-coffee .last-news-container .item-default:last-child {
+    display: none;
+  }
   .content-settings-account .mailling-offers .clear-all {
     display: block;
     margin: 15px auto 0;
