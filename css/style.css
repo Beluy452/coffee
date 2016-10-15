@@ -574,7 +574,8 @@ header .mouse-block span {
   top: 60px;
   z-index: 9999;
   height: 100vh;
-  overflow-y: auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
   padding-bottom: 60px;
 }
 .content .registration .title-register {
