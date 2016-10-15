@@ -5,33 +5,40 @@
 // });
 
 $(document).ready(function () {
-    $(".forgot-pass").click(function () {
-        $("#login").modal("hide");
-    });
-    $(".back-to-login").click(function () {
-        $("#new-pass").modal("hide");
-    });
-    $(".register").click(function () {
-        $("#login").modal("hide");
-    });
-    $(".register-new-pass").click(function () {
-        $("#new-pass").modal("hide");
-    });
-    $(".back-login").click(function () {
-        $("#registration").modal("hide");
-    });
-    $(".close").click(function (event) {
-        event.preventDefault();
-        $("#registration").modal("hide");
-    });
-    $(".close-new-pass").click(function (event) {
-        event.preventDefault();
-        $("#new-pass").modal("hide");
-    });
-    $(".close-login").click(function (event) {
-        event.preventDefault();
-        $("#login").modal("hide");
-    });
+    // $(".forgot-pass").click(function () {
+    //     $("#login").modal("hide");
+    // });
+    // $(".back-to-login").click(function () {
+    //     $("#new-pass").modal("hide");
+    // });
+    // $(".register").click(function () {
+    //     $("#login").modal("hide");
+    // });
+    // $(".register-new-pass").click(function () {
+    //     $("#new-pass").modal("hide");
+    // });
+    // $(".back-login").click(function () {
+    //     $("#registration").modal("hide");
+    // });
+    // $(".close").click(function (event) {
+    //     event.preventDefault();
+    //     $("#registration").modal("hide");
+    // });
+    // $(".close-new-pass").click(function (event) {
+    //     event.preventDefault();
+    //     $("#new-pass").modal("hide");
+    // });
+    // $(".close-login").click(function (event) {
+    //     event.preventDefault();
+    //     $("#login").modal("hide");
+    // });
+
+    // $('.modal').on('shown', function() {
+    //     $("body.modal-open").removeAttr("style");
+    // });
+    // $('.modal').on('hide', function() {
+    //     $("body.modal-open").removeAttr("style");
+    // });
 
 
     $(".add-address-company").click(function (event) {
@@ -82,7 +89,7 @@ $(document).ready(function () {
         event.preventDefault();
         var anchor = this.hash;
         $('html, body').stop().animate({
-            scrollTop: $(anchor).offset().top - 0
+            scrollTop: $(anchor).offset().top - 10
         }, 1500);
     });
     //scroll якорів
@@ -91,7 +98,7 @@ $(document).ready(function () {
     $(window).on('scroll', function () {
         var scroll = $(window).scrollTop();
 
-        if (scroll >= 400) {
+        if (scroll >= 620) {
             $('nav').addClass('fixed');
         } else {
             $('nav').removeClass('fixed');
@@ -109,15 +116,6 @@ $(document).ready(function () {
         $('body').toggleClass('active');
     });
 
-    //open-social-block
-    // $('.open-social').hover(function (event) {
-    //         event.preventDefault();
-    //         $('.hidden-social').addClass('open-soc');
-    //     },
-    //     function () {
-    //         $('.hidden-social').removeClass('open-soc');
-    //     });
-    //open-social-block
 
     //open-info
     $('.open-info').click(function () {
