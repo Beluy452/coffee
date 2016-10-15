@@ -2908,6 +2908,7 @@ footer .view-info:hover {
   }
   .wrapper .content #registration .close {
     margin-top: 12px;
+    margin-right: 13px;
   }
   .wrapper .content #login .forgot-pass {
     max-width: 110px;
@@ -3213,9 +3214,6 @@ footer .view-info:hover {
   .wrapper .content #settings-log-out .faq {
     font-size: 12px;
   }
-  .wrapper .content #registration .close {
-    top: -120px;
-  }
   .wrapper .content #registration .back-login {
     margin-bottom: 10px;
   }
@@ -3229,7 +3227,7 @@ footer .view-info:hover {
     width: 100%;
   }
   .coffee-page .result-item {
-    max-width: 47%;
+    max-width: 48%;
   }
 }
 @media only screen and (max-height: 414px) {
