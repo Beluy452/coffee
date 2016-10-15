@@ -1302,6 +1302,7 @@ footer .view-info:hover {
   font-size: 14px;
   font-weight: 100;
 }
+/*contact-page-begin*/
 .contact-page header {
   background: url("../img/contacts/header-bg.png") no-repeat;
   background-size: cover;
@@ -2032,6 +2033,8 @@ footer .view-info:hover {
 .coffee-page .pagination {
   margin: 0 0 20px;
 }
+/*coffee-page-end*/
+/*settings-page-begin*/
 .content-settings-account {
   max-width: 1000px;
   margin: 75px auto 0;
@@ -2455,6 +2458,9 @@ footer .view-info:hover {
   .news-page .tags-container {
     max-width: 750px;
     margin: auto;
+  }
+  .news-page .items {
+    margin: 0 auto 25px;
   }
   .news-page .items .item-default {
     max-width: 370px;
