@@ -7,13 +7,16 @@
 body {
   font-size: 14px;
   font-family: 'Roboto', sans-serif;
+  padding-right: 0 !important;
 }
 body.active {
   overflow: hidden;
+  position: fixed;
+  left: 0;
+  right: 0;
   -webkit-transition: .3s;
   transition: .3s;
-  opacity: 0.7;
-  background: #000;
+  background: rgba(93, 92, 92, 0.49);
 }
 a:hover,
 a:focus {
@@ -161,7 +164,8 @@ img {
   font-size: 16px;
   padding: 5px 5px;
 }
-.pagination li a:hover {
+.pagination li a:hover,
+.pagination li a:focus {
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
@@ -185,7 +189,7 @@ a:focus {
   max-width: 245px;
   padding: 0 15px;
   background: #3e3d3d;
-  z-index: 10;
+  z-index: 1052;
   -webkit-transform: translateX(-100%);
       -ms-transform: translateX(-100%);
           transform: translateX(-100%);
@@ -332,7 +336,6 @@ input::-webkit-inner-spin-button {
   -webkit-border-radius: 0;
           border-radius: 0;
 }
-/*mixins*/
 .uppercase {
   text-transform: uppercase;
 }
@@ -347,7 +350,9 @@ input::-webkit-inner-spin-button {
       -ms-flex-direction: row;
           flex-direction: row;
 }
-/*mixins*/
+.form-control {
+  padding: 6px 7px;
+}
 /*animation css*/
 .animate {
   -webkit-transition: .3s;
@@ -460,7 +465,6 @@ header .mouse-block span {
   background: #2c2c2c;
   -webkit-box-shadow: 0 0 1px 1px #000;
           box-shadow: 0 0 1px 1px #000;
-  border-bottom: 1px solid #2c2c2c;
 }
 .content .fixed {
   position: fixed;
@@ -468,14 +472,17 @@ header .mouse-block span {
   right: 0;
   top: 0;
   z-index: 9999;
+  min-height: 59px;
 }
 .content .modal-style {
   position: absolute;
+  left: 0;
+  right: 0;
   top: 60px;
   height: 130px;
   background: #3e3d3d;
-  -webkit-box-shadow: 0px 2px 5px -2px #000 inset;
-          box-shadow: 0px 2px 5px -2px #000 inset;
+  -webkit-box-shadow: 0 2px 5px -2px #000 inset;
+          box-shadow: 0 2px 5px -2px #000 inset;
 }
 .content .modal-style .form-login .col-md-4,
 .content .modal-style .form-login .col-md-2,
@@ -512,6 +519,7 @@ header .mouse-block span {
   margin-top: 20px;
   margin-bottom: 15px;
   font-size: 18px;
+  font-weight: 100;
 }
 .content .modal-style .forgot-pass {
   color: #fff;
@@ -524,7 +532,7 @@ header .mouse-block span {
 .content .modal-style .dont-account {
   color: #c4c4c4;
   font-size: 18px;
-  padding-top: 20px;
+  padding-top: 35px;
   padding-bottom: 15px;
 }
 .content .modal-style .register {
@@ -873,12 +881,12 @@ header .mouse-block span {
   min-height: 60px;
   -webkit-box-shadow: 0 0 1px 2px #ddd;
           box-shadow: 0 0 1px 2px #ddd;
-  line-height: 60px;
+  line-height: 57px;
   margin-bottom: 45px;
   text-align: center;
 }
 .content .brand .bx-wrapper {
-  padding-top: 25px;
+  padding-top: 15px;
 }
 .content .brand .col-sm-2 {
   padding: 0;
@@ -888,6 +896,8 @@ header .mouse-block span {
   text-transform: uppercase;
   font-size: 12px;
   color: #595757;
+  margin-bottom: 0;
+  padding-top: 3px;
 }
 .content .brand .view-all-coffee {
   margin-top: 15px;
@@ -1054,7 +1064,7 @@ footer .parner-text,
 footer .contact-text {
   position: absolute;
   max-width: 280px;
-  top: 20%;
+  top: 15%;
   left: 0;
   right: 0;
   margin: auto;
@@ -1090,6 +1100,12 @@ footer .view-info:hover {
 }
 .about-page {
   color: #646464;
+}
+.about-page .content nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1051;
 }
 .about-page .menu-about {
   height: 60px;
@@ -1166,7 +1182,7 @@ footer .view-info:hover {
   color: #c6c6c6;
 }
 .about-page .mail-form-about .textarea-style {
-  padding-top: 50px;
+  padding-top: 0;
   margin-top: 25px;
 }
 .about-page .mail-form-about textarea {
@@ -1278,14 +1294,14 @@ footer .view-info:hover {
 }
 .contact-page .form-material {
   background: #f8f8f9;
-  padding: 30px 15px;
+  height: 100%;
+  padding: 50px 15px;
 }
 .contact-page .form-material .form-control {
   background: #f8f8f9;
-  height: 55px;
 }
 .contact-page .form-material .submit-container {
-  margin-top: 5px;
+  margin-top: 35px;
 }
 .contact-page .form-material #shest {
   -moz-appearance: textfield;
@@ -1371,6 +1387,7 @@ footer .view-info:hover {
   margin: 30px 0;
   font-weight: 100;
 }
+/*news-page-begin*/
 .news-page .container-contacts {
   max-width: 1000px;
   padding: 0;
@@ -1416,7 +1433,7 @@ footer .view-info:hover {
   max-width: 495px;
   -webkit-box-shadow: 0 3px 6px 0 #ddd;
   box-shadow: 0 3px 6px 0 #ddd;
-  margin: 10px 0;
+  margin: 10px 0 0;
 }
 .news-page .items .img-block {
   position: relative;
@@ -1467,7 +1484,7 @@ footer .view-info:hover {
 }
 .news-page .items .description-block .like-and-repost a {
   color: #757575;
-  margin: 0 3px;
+  margin-left: 7px;
   -webkit-transition: .3s;
   transition: .3s;
 }
@@ -1512,7 +1529,7 @@ footer .view-info:hover {
 }
 .news-page .title-item {
   font-size: 14px;
-  margin: 25px auto 15px;
+  margin: 25px auto 10px;
 }
 .news-page .title-item .category-name {
   color: #bdbdbd;
@@ -1531,9 +1548,23 @@ footer .view-info:hover {
   font-weight: 100;
 }
 .news-page .item .tags-container {
-  padding: 0;
+  padding: 10px;
+  margin: 0;
+  border: 1px solid #d6d6d6;
 }
-.news-page .item .tags-container .data-news {
+.news-page .item .tags-container .tags {
+  display: inline-block;
+}
+.news-page .item .item-description .item-img-container {
+  float: right;
+  position: relative;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.news-page .item .item-description .item-img-container .data-news {
+  position: absolute;
+  top: 0;
+  left: 0;
   background: #ef524b;
   display: inline-block;
   color: #fff;
@@ -1543,14 +1574,6 @@ footer .view-info:hover {
   width: 100%;
   text-align: center;
   margin-right: 15px;
-}
-.news-page .item .tags-container .tags {
-  display: inline-block;
-}
-.news-page .item .item-description .img-item {
-  float: right;
-  margin-left: 20px;
-  margin-bottom: 20px;
 }
 .news-page .item .smm-coffee {
   color: #ef524b;
@@ -1629,7 +1652,6 @@ footer .view-info:hover {
   margin-top: 0;
 }
 .news-page .social-container {
-  border-top: 1px solid #c4c4c4;
   text-align: center;
   height: 35px;
   line-height: 35px;
@@ -1659,9 +1681,14 @@ footer .view-info:hover {
   display: inline-block;
   cursor: pointer;
   position: relative;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 .news-page .sharing:hover .hidden-social {
   display: block;
+}
+.news-page .sharing:hover {
+  color: #ef524b;
 }
 .news-page .last-news-container {
   margin-top: 40px;
@@ -1687,6 +1714,7 @@ footer .view-info:hover {
   color: #fff;
   background: #2d2b2b;
 }
+/*coffee-page-begin*/
 .coffee-page .container-coffee {
   max-width: 1000px;
   margin: auto;
@@ -1722,6 +1750,11 @@ footer .view-info:hover {
   background: #f4f4f4;
   padding: 10px 20px 10px;
 }
+.coffee-page .check-container span {
+  display: inline-block;
+  line-height: 14px;
+  vertical-align: bottom;
+}
 .coffee-page input[type=checkbox] {
   display: none;
 }
@@ -1747,7 +1780,7 @@ footer .view-info:hover {
   height: 15px;
   padding: 0;
   margin-bottom: 0;
-  vertical-align: middle;
+  vertical-align: bottom;
   cursor: pointer;
 }
 .coffee-page .filter-brand input[type=radio] {
@@ -1951,6 +1984,9 @@ footer .view-info:hover {
   -webkit-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
           transform: rotate(-90deg);
+}
+.coffee-page .pagination {
+  margin: 0 0 20px;
 }
 .content-settings-account {
   max-width: 1000px;
@@ -2274,11 +2310,16 @@ footer .view-info:hover {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 9;
+    z-index: 1051;
   }
   #nav .container {
     max-width: 100%;
     width: 100%;
+  }
+  .modal-open {
+    position: fixed;
+    left: 0;
+    right: 0;
   }
   .logo,
   .menu {
@@ -2317,6 +2358,11 @@ footer .view-info:hover {
   }
   .back-top {
     display: block;
+    color: #fff;
+  }
+  .back-top:hover,
+  .back-top:focus {
+    color: #fff;
   }
   .content .modal-style .login-form-container {
     padding-left: 8%;
@@ -2408,7 +2454,7 @@ footer .view-info:hover {
 }
 @media only screen and (max-width: 992px) {
   .content .account-advantages {
-    background: url(../img/coffe-bg-repit.png) no-repeat -360px 207px;
+    background: none;
   }
   .content #settings-log-out a {
     margin: 0;
@@ -2460,9 +2506,6 @@ footer .view-info:hover {
     margin: 0 auto 30px;
     border-bottom: 0;
   }
-  .wrapper .content .account-advantages {
-    background: url(../img/coffe-bg-repit.png) no-repeat -355px 155px;
-  }
   .wrapper .content .account-advantages .tab-content {
     text-align: center;
   }
@@ -2491,11 +2534,15 @@ footer .view-info:hover {
   .wrapper .content #registration .close {
     position: absolute;
     right: 25px;
-    top: -135px;
+    top: -100px;
     margin: 0;
   }
   .wrapper .content #settings-log-out {
     max-height: inherit;
+  }
+  .wrapper .content #settings-log-out .col-sm-10,
+  .wrapper .content #settings-log-out .col-sm-2 {
+    width: 100%;
   }
   .wrapper .content #settings-log-out .log-out-container {
     margin-top: 20px;
@@ -2604,7 +2651,10 @@ footer .view-info:hover {
     font-size: 16px;
   }
   .coffee-page .container-coffee .last-news-container .item-default {
-    width: 100%;
+    width: 48%;
+  }
+  .coffee-page .container-coffee .last-news-container .item-default:nth-child(odd) {
+    margin-right: 2%;
   }
   .coffee-page .container-coffee .last-news-container .item-default:nth-child(2) {
     margin: 10px 0;
@@ -2720,6 +2770,8 @@ footer .view-info:hover {
     max-width: 170px;
     line-height: 50px;
     height: 50px;
+    color: #fff;
+    border-color: #fff;
   }
   .wrapper .content #settings-log-out {
     max-height: 220px;
@@ -2742,7 +2794,7 @@ footer .view-info:hover {
     height: 255px;
   }
   .wrapper .content .modal-style .title-login {
-    margin-top: 15px;
+    margin-top: 25px;
     font-size: 14px;
   }
   .wrapper .content .modal-style .login-form-container {
@@ -2761,13 +2813,14 @@ footer .view-info:hover {
   }
   .wrapper .content .modal-style .register {
     position: absolute;
-    top: 14px;
+    top: 7px;
     right: 0;
   }
   .wrapper .content .modal-style .dont-account {
     position: absolute;
     left: 0;
     font-size: 14px;
+    padding-top: 15px;
   }
   .wrapper .content #login .close-login,
   .wrapper .content #new-pass .close-login,
@@ -2798,14 +2851,16 @@ footer .view-info:hover {
     padding: 0;
   }
   .wrapper .content #new-pass {
-    padding-top: 30px;
+    padding-top: 0;
+    max-height: 240px;
   }
   .wrapper .content #new-pass .form-login {
     max-width: 100%;
   }
   .wrapper .content #new-pass .forgot-pass {
-    top: -30px;
-    left: 0;
+    position: static;
+    margin: auto;
+    text-align: center;
     max-width: 90px;
   }
   .wrapper .content #new-pass .col-xs-7,
@@ -2837,7 +2892,7 @@ footer .view-info:hover {
   .wrapper .content #registration .back-login {
     border-bottom: 1px solid #9b9b9b;
     margin-left: 13px;
-    margin-bottom: 25px;
+    padding-top: 10px;
   }
   .wrapper .content #registration .back-login span {
     display: none;
@@ -2845,9 +2900,18 @@ footer .view-info:hover {
   .wrapper .content #registration .custom-check {
     margin: 0;
   }
+  .wrapper .content #registration .person-email-text {
+    margin-right: 10px;
+  }
   .wrapper .content #registration .to-get-email-container {
     margin-bottom: 10px;
     text-align: center;
+  }
+  .wrapper .content #registration .company-title {
+    margin: 75px 0 35px;
+  }
+  .wrapper .content #registration .close {
+    top: -95px;
   }
   .wrapper .content #login .forgot-pass {
     max-width: 110px;
@@ -2873,6 +2937,14 @@ footer .view-info:hover {
 @media only screen and (max-width: 480px) {
   .wrapper .content #settings-log-out {
     top: 40px;
+    max-height: 200px;
+    padding: 1px 0;
+  }
+  .wrapper .content #new-pass {
+    max-height: 255px;
+  }
+  .wrapper .content #registration .close {
+    top: -120px;
   }
   .wrapper .content .modal-style,
   .wrapper .content .registration {
@@ -2904,7 +2976,6 @@ footer .view-info:hover {
   }
   .wrapper .content .account-advantages {
     padding: 0 30px;
-    background: url(../img/coffe-bg-repit.png) no-repeat -355px 325px;
   }
   .wrapper .content .ground-coffee,
   .wrapper .content .coffee-beans {
@@ -3003,6 +3074,9 @@ footer .view-info:hover {
   .contact-page .have-question {
     display: block;
   }
+  .about-page header {
+    display: none;
+  }
   .about-page .menu-about {
     height: 40px;
   }
@@ -3020,11 +3094,13 @@ footer .view-info:hover {
   .news-page .item .smm-coffee {
     font-size: 12px;
   }
-  .news-page .item .item-description .img-item {
+  .news-page .item .item-description .item-img-container {
     float: none;
+    margin-left: 0;
+  }
+  .news-page .item .item-description .img-item {
     max-width: 100%;
     width: 100%;
-    margin-left: 0;
   }
   .news-page .item .from-coffee .img-container {
     float: none;
@@ -3057,6 +3133,10 @@ footer .view-info:hover {
   .news-page .item .from-coffee .img-container .magnifier-img {
     max-width: 18px;
     height: 18px;
+  }
+  .news-page .title-item .category-description,
+  .news-page .title-item .category-name {
+    font-size: 11px;
   }
   .coffee-page .filter-container {
     margin-top: 40px;
@@ -3091,6 +3171,15 @@ footer .view-info:hover {
   .coffee-page .filter-mobile .filter-brand {
     margin-right: 0;
   }
+  .coffee-page .container-coffee .last-news-container .item-default {
+    width: 100%;
+  }
+  .coffee-page .container-coffee .last-news-container .item-default:nth-child(odd) {
+    margin-right: 0;
+  }
+  .coffee-page .container-coffee .last-news-container .item-default:nth-child(2) {
+    margin: 10px 0;
+  }
   .content-settings-account .wishlist .go-it-container {
     text-align: center;
   }
@@ -3109,7 +3198,7 @@ footer .view-info:hover {
 }
 @media only screen and (max-width: 400px) {
   .wrapper .content #settings-log-out .log-out-container {
-    line-height: 205px;
+    line-height: 203px;
   }
   .wrapper .content #settings-log-out .log-out-container .log-out {
     display: inline-block;
@@ -3133,6 +3222,12 @@ footer .view-info:hover {
   .wrapper .content #settings-log-out .mailling-offers,
   .wrapper .content #settings-log-out .faq {
     font-size: 12px;
+  }
+  .wrapper .content #registration .close {
+    top: -120px;
+  }
+  .wrapper .content #registration .back-login {
+    margin-bottom: 10px;
   }
   .content-settings-account .mailling-offers .custom-brand-container span {
     max-width: 120px;
