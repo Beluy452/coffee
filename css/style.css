@@ -2791,7 +2791,7 @@ footer .view-info:hover {
     margin: 5px;
   }
   .wrapper .content .modal-style {
-    height: 255px;
+    height: 270px;
   }
   .wrapper .content .modal-style .title-login {
     margin-top: 25px;
@@ -2852,7 +2852,6 @@ footer .view-info:hover {
   }
   .wrapper .content #new-pass {
     padding-top: 0;
-    max-height: 240px;
   }
   .wrapper .content #new-pass .form-login {
     max-width: 100%;
@@ -2939,9 +2938,6 @@ footer .view-info:hover {
     top: 40px;
     max-height: 200px;
     padding: 1px 0;
-  }
-  .wrapper .content #new-pass {
-    max-height: 255px;
   }
   .wrapper .content #registration .close {
     top: -120px;
