@@ -3285,4 +3285,7 @@ footer .view-info:hover {
   .wrapper .content #menu-mobile .menu li {
     padding: 0 0 5px;
   }
+  .wrapper .content #registration .close {
+    top: -90px;
+  }
 }
