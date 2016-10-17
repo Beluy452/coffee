@@ -193,7 +193,7 @@ a:focus {
 #menu-mobile .container-mobile-menu {
   max-width: 245px;
   padding: 0 15px;
-  background: #3e3d3d;
+  background: #252424;
   height: 100%;
 }
 #menu-mobile .container-mobile-menu .logo {
@@ -270,7 +270,7 @@ a:focus {
   text-transform: uppercase;
   font-size: 10px;
   font-weight: 100;
-  background: #3e3d3d;
+  background: #252424;
 }
 #menu-mobile.open {
   -webkit-transform: translateX(0);
@@ -3068,7 +3068,7 @@ footer .view-info:hover {
   }
   .toggle-menu {
     height: 49px;
-    width: 50px;
+    width: 40px;
     top: -5px;
   }
   .toggle-menu span {
@@ -3087,7 +3087,7 @@ footer .view-info:hover {
     top: 8px;
   }
   .toggle-menu.active {
-    top: -10px;
+    top: -9px;
   }
   .contact-page header {
     display: none;
