@@ -515,6 +515,8 @@ header .mouse-block span {
   background: #3e3d3d;
   -webkit-box-shadow: 0 2px 5px -2px #000 inset;
           box-shadow: 0 2px 5px -2px #000 inset;
+  padding: 2px 0;
+  overflow: hidden;
 }
 .content .modal-style .form-login .col-md-4,
 .content .modal-style .form-login .col-md-2,
@@ -566,6 +568,7 @@ header .mouse-block span {
   font-size: 18px;
   padding-top: 35px;
   padding-bottom: 15px;
+  font-weight: 100;
 }
 .content .modal-style .register {
   width: 94px;
@@ -954,6 +957,19 @@ header .mouse-block span {
 .content .brand .view-all-coffee:hover {
   background: #000;
 }
+.content .brand .brand-coffee img {
+  filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+  cursor: pointer;
+  opacity: 0.5;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.content .brand .brand-coffee img:hover {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+  opacity: 1;
+}
 .content .account-advantages {
   background: url(../img/coffe-bg-repit.png) no-repeat -25% 150%;
 }
@@ -1285,6 +1301,8 @@ footer .view-info:hover {
   background: url(../img/coffe-bg-repit.png) no-repeat -235px 0;
   height: 25px;
 }
+/*about-page-end*/
+/*parnership-page-begin*/
 .partnership-page header {
   background: url("../img/about-partnership/partnership-header-bg.jpg") no-repeat;
   background-size: cover;
@@ -1302,6 +1320,7 @@ footer .view-info:hover {
   font-size: 14px;
   font-weight: 100;
 }
+/*parnership-page-end*/
 /*contact-page-begin*/
 .contact-page header {
   background: url("../img/contacts/header-bg.png") no-repeat;
@@ -1429,7 +1448,11 @@ footer .view-info:hover {
   margin: 30px 0;
   font-weight: 100;
 }
+/*contact-page-end*/
 /*news-page-begin*/
+.news-page {
+  /*news-item*/
+}
 .news-page .container-contacts {
   max-width: 1000px;
   padding: 0;
@@ -1469,6 +1492,9 @@ footer .view-info:hover {
   color: #000;
   margin: 0;
   border: none;
+}
+.news-page .items {
+  margin: 0 auto 25px;
 }
 .news-page .items .item-default {
   float: left;
@@ -1593,6 +1619,7 @@ footer .view-info:hover {
   padding: 10px;
   margin: 0;
   border: 1px solid #d6d6d6;
+  max-width: 100%;
 }
 .news-page .item .tags-container .tags {
   display: inline-block;
@@ -1657,6 +1684,8 @@ footer .view-info:hover {
   float: right;
   position: relative;
   margin-right: 25px;
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
 }
 .news-page .item .from-coffee .img-container img,
 .news-page .item .from-coffee .img-container .shadow-block {
@@ -1666,32 +1695,23 @@ footer .view-info:hover {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-.news-page .item .from-coffee .img-container:hover .magnifier-img {
-  opacity: 1;
-}
-.news-page .item .from-coffee .img-container:hover img {
+.news-page .item .from-coffee .img-container .zoom-img {
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
-.news-page .item .from-coffee .img-container:hover .shadow-block {
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
-}
-.news-page .item .from-coffee .magnifier-img {
-  position: absolute;
-  bottom: 50px;
-  right: 55px;
-  opacity: 0;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+.news-page .item .from-coffee .cursor {
+  cursor: -webkit-zoom-out;
+  cursor: zoom-out;
 }
 .news-page .item .item-title {
   font-size: 20px;
   color: #373737;
-  padding-top: 10px;
+  padding-top: 0;
   margin-top: 0;
+}
+.news-page .item .item-title .border-right {
+  float: left;
 }
 .news-page .social-container {
   text-align: center;
@@ -2454,6 +2474,16 @@ footer .view-info:hover {
   .about-page .menu-about {
     height: 50px;
   }
+  .contact-page .have-question {
+    display: block;
+    margin: 0 0 30px;
+  }
+  .contact-page .form-material {
+    padding: 30px 15px 50px;
+  }
+  .contact-page .mail-form-about .address-container {
+    margin-bottom: 35px;
+  }
   .news-page .items,
   .news-page .tags-container {
     max-width: 750px;
@@ -2654,11 +2684,11 @@ footer .view-info:hover {
     padding: 0 5px;
   }
   .news-page .items .item-default {
-    max-width: 100%;
+    max-width: 49%;
     margin-right: 0;
   }
   .news-page .items .item-default:nth-child(odd) {
-    margin-right: 0;
+    margin-right: 10px;
   }
   .news-page .item .item-description .img-item {
     max-width: 275px;
@@ -2982,6 +3012,13 @@ footer .view-info:hover {
   .coffee-page .filter-mobile .filter-type select {
     width: 100px;
   }
+  .news-page .items .item-default {
+    max-width: 100%;
+    margin-right: 0;
+  }
+  .news-page .items .item-default:nth-child(odd) {
+    margin-right: 0;
+  }
 }
 @media only screen and (max-width: 480px) {
   .wrapper .content #settings-log-out {
@@ -3120,9 +3157,6 @@ footer .view-info:hover {
   .contact-page .form-material {
     padding: 0 0 20px;
   }
-  .contact-page .have-question {
-    display: block;
-  }
   .about-page .menu-about {
     height: 40px;
   }
@@ -3136,6 +3170,11 @@ footer .view-info:hover {
     line-height: 30px;
     text-align: center;
     font-size: 14px;
+  }
+  .news-page .item {
+    border: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
   .news-page .item .smm-coffee {
     font-size: 12px;
@@ -3153,32 +3192,15 @@ footer .view-info:hover {
     margin-right: 0;
   }
   .news-page .item .from-coffee .img-container img {
-    -webkit-transform: scale(0.8);
-    -ms-transform: scale(0.8);
-    transform: scale(0.8);
-  }
-  .news-page .item .from-coffee .img-container .shadow-block {
-    -webkit-transform: scale(0.8);
-    -ms-transform: scale(0.8);
-    transform: scale(0.8);
-  }
-  .news-page .item .from-coffee .img-container:hover img {
-    -webkit-transform: scale(0.9);
-    -ms-transform: scale(0.9);
-    transform: scale(0.9);
-  }
-  .news-page .item .from-coffee .img-container:hover .shadow-block {
-    -webkit-transform: scale(0.9);
-    -ms-transform: scale(0.9);
-    transform: scale(0.9);
-  }
-  .news-page .item .from-coffee .img-container img {
     max-width: 100%;
     width: 100%;
   }
-  .news-page .item .from-coffee .img-container .magnifier-img {
-    max-width: 18px;
-    height: 18px;
+  .news-page .item .social-container {
+    border: 1px solid #d6d6d6;
+    border-top: 0;
+  }
+  .news-page .title-item {
+    margin: 10px auto;
   }
   .news-page .title-item .category-description,
   .news-page .title-item .category-name {
