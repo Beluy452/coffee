@@ -14,8 +14,6 @@ body.active {
   position: fixed;
   left: 0;
   right: 0;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
   background: rgba(93, 92, 92, 0.49);
 }
 a:hover,
@@ -179,113 +177,115 @@ select:focus {
 a:focus {
   outline: none;
 }
+/*toggle-menu*/
 #menu-mobile {
-  display: none;
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 100vh;
+  height: 100%;
+  background: rgba(93, 92, 92, 0.5);
+  z-index: 1052;
+}
+#menu-mobile .container-mobile-menu {
   max-width: 245px;
   padding: 0 15px;
   background: #3e3d3d;
-  z-index: 1052;
-  -webkit-transform: translateX(-100%);
-      -ms-transform: translateX(-100%);
-          transform: translateX(-100%);
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  height: 100%;
 }
-#menu-mobile .logo {
+#menu-mobile .container-mobile-menu .logo {
   max-width: 100%;
   padding: 40px 0 60px;
 }
-#menu-mobile .title-mobile-menu {
+#menu-mobile .container-mobile-menu .title-mobile-menu {
   max-width: 130px;
   margin: auto;
 }
-#menu-mobile .title-mobile-menu h2 {
+#menu-mobile .container-mobile-menu .title-mobile-menu h2 {
   font-family: "Bench", sans-serif;
   color: #cacaca;
   margin: 0;
   font-size: 40px;
   line-height: 1;
 }
-#menu-mobile .title-mobile-menu h2 img {
+#menu-mobile .container-mobile-menu .title-mobile-menu h2 img {
   vertical-align: top;
   padding-top: 6px;
 }
-#menu-mobile .title-mobile-menu .border {
+#menu-mobile .container-mobile-menu .title-mobile-menu .border {
   height: 1px;
   background: #ddd;
   margin-top: -4px;
   margin-bottom: 2px;
 }
-#menu-mobile .title-mobile-menu h3 {
+#menu-mobile .container-mobile-menu .title-mobile-menu h3 {
   font-size: 12px;
   text-transform: uppercase;
   font-weight: 500;
   color: #cacaca;
 }
-#menu-mobile .menu {
+#menu-mobile .container-mobile-menu .menu {
   display: block;
   padding: 0 0 70px;
   width: 100%;
 }
-#menu-mobile .menu li {
+#menu-mobile .container-mobile-menu .menu li {
   display: block;
   padding: 0 0 20px;
 }
-#menu-mobile .menu li a {
+#menu-mobile .container-mobile-menu .menu li a {
   font-weight: bold;
   font-size: 16px;
   color: #828181;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-#menu-mobile .menu li a:hover {
+#menu-mobile .container-mobile-menu .menu li a:hover {
   color: #ecebec;
 }
-#menu-mobile .change-lang-container {
+#menu-mobile .container-mobile-menu .change-lang-container {
   color: #7d7c7c;
   padding: 15px 0;
   border-top: 1px solid #d5d5d5;
   border-bottom: 1px solid #d5d5d5;
   margin-bottom: 30px;
 }
-#menu-mobile .change-lang-container .lang {
+#menu-mobile .container-mobile-menu .change-lang-container .lang {
   border: 1px solid #c6c6c6;
   padding: 5px;
   color: #c6c6c6;
   margin-left: 10px;
 }
-#menu-mobile .social {
+#menu-mobile .container-mobile-menu .social {
   padding-bottom: 20px;
 }
-#menu-mobile .social a {
+#menu-mobile .container-mobile-menu .social a {
   margin: 0 6px;
   color: #3e3d3d;
 }
-#menu-mobile .copyright {
+#menu-mobile .container-mobile-menu .copyright {
   text-transform: uppercase;
   font-size: 10px;
   font-weight: 100;
   background: #3e3d3d;
 }
-.open {
-  -webkit-transform: translateX(0) !important;
-      -ms-transform: translateX(0) !important;
-          transform: translateX(0) !important;
+#menu-mobile.open {
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
 }
 .toggle-menu {
   display: none;
   cursor: pointer;
-  position: absolute;
+  position: fixed;
   left: 13px;
-  height: 50px;
   width: 50px;
+  height: 55px;
   top: -2px;
-  z-index: 1;
+  z-index: 9999;
 }
 .toggle-menu.active {
   left: 245px;
@@ -293,7 +293,7 @@ a:focus {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   background: #2c2c2c;
-  padding-left: 14px;
+  padding-left: 8px;
 }
 .toggle-menu span {
   cursor: pointer;
@@ -306,8 +306,6 @@ a:focus {
   display: block;
   content: '';
   top: 25px;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
 .toggle-menu span:before {
   cursor: pointer;
@@ -826,17 +824,17 @@ header .mouse-block span {
 .content #settings-log-out .log-out {
   max-width: 70px;
 }
-.content #log-out {
+.content .log-out {
   text-align: center;
   padding: 20px;
   height: 100px;
 }
-.content #log-out h3 {
+.content .log-out h3 {
   color: #c4c4c4;
   font-size: 16px;
   margin-bottom: 10px;
 }
-.content #log-out a {
+.content .log-out a {
   color: #c4c4c4;
   display: inline-block;
   max-width: 70px;
@@ -847,7 +845,7 @@ header .mouse-block span {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-.content #log-out a:hover {
+.content .log-out a:hover {
   border-color: #c4c4c4;
 }
 .content .logo {
@@ -2994,6 +2992,9 @@ footer .view-info:hover {
   }
   .wrapper .content #login .forgot-pass {
     max-width: 110px;
+  }
+  .wrapper .content .log-out {
+    height: 100px;
   }
   .content-about {
     padding: 0 5px;
