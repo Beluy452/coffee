@@ -177,6 +177,9 @@ select:focus {
 a:focus {
   outline: none;
 }
+.custom-style-menu {
+  height: 60px;
+}
 /*toggle-menu*/
 #menu-mobile {
   -webkit-transform: translateX(-100%);
@@ -1161,9 +1164,6 @@ footer .view-info:hover {
   opacity: 1;
   visibility: visible;
   min-height: 60px;
-}
-.about-page .menu-about {
-  height: 60px;
 }
 .about-page header {
   background: url("../img/about-partnership/header-bg.jpg") no-repeat 50%;
@@ -2469,7 +2469,7 @@ footer .view-info:hover {
   .copyright .copyright-text {
     display: none;
   }
-  .about-page .menu-about {
+  .custom-style-menu {
     height: 50px;
   }
   .contact-page .have-question {
@@ -2673,6 +2673,9 @@ footer .view-info:hover {
   .contact-page .form-material {
     max-width: 100%;
     padding: 0 0 20px;
+  }
+  .contact-page .have-question {
+    margin: 30px 0 30px;
   }
   .news-page .nav-tabs {
     border-bottom: 1px solid #ddd;
@@ -3158,7 +3161,7 @@ footer .view-info:hover {
   .contact-page .form-material {
     padding: 0 0 20px;
   }
-  .about-page .menu-about {
+  .custom-style-menu {
     height: 40px;
   }
   .about-page .kupcha-container .kupcha {
