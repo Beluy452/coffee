@@ -779,11 +779,10 @@ header .mouse-block span {
 .content .registration .close {
   margin-top: 30px;
 }
-.content #settings-log-out {
+.content #settings-log-out .modal-style {
   padding: 15px 0;
   text-align: center;
   max-height: 60px;
-  top: 50px;
 }
 .content #settings-log-out .container-settings {
   max-width: 1090px;
@@ -791,6 +790,9 @@ header .mouse-block span {
 }
 .content #settings-log-out .setting-log-out-container {
   border-right: 1px solid #565656;
+}
+.content #settings-log-out .log-out-container .log-out {
+  padding: 0;
 }
 .content #settings-log-out h3 {
   display: none;
@@ -2611,7 +2613,7 @@ footer .view-info:hover {
   .wrapper .content #registration .to-get-email-container {
     text-align: center;
   }
-  .wrapper .content #settings-log-out {
+  .wrapper .content #settings-log-out .modal-style {
     max-height: inherit;
   }
   .wrapper .content #settings-log-out .col-sm-10,
@@ -2853,8 +2855,9 @@ footer .view-info:hover {
     color: #fff;
     border-color: #fff;
   }
-  .wrapper .content #settings-log-out {
+  .wrapper .content #settings-log-out .modal-style {
     max-height: 220px;
+    overflow: hidden;
   }
   .wrapper .content #settings-log-out .setting-log-out-container {
     max-width: 390px;
@@ -3025,10 +3028,9 @@ footer .view-info:hover {
   }
 }
 @media only screen and (max-width: 480px) {
-  .wrapper .content #settings-log-out {
-    top: 40px;
-    max-height: 200px;
-    padding: 1px 0;
+  .wrapper .content #settings-log-out .modal-style {
+    padding: 5px 0;
+    overflow: hidden;
   }
   .wrapper .content .modal-style,
   .wrapper .content .registration {
